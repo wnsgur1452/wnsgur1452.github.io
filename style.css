@@ -1,0 +1,304 @@
+/* 커스텀 스타일 - TailwindCSS 보완용 */
+
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+/* 컨테이너 설정 */
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* 프로필 카드 초기 위치 및 애니메이션 */
+.profile-card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    min-height: 600px;
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+}
+
+/* 프로필 카드 좌측 이동 상태 */
+.profile-card.shifted {
+    transform: translate(calc(-50% - 200px), -50%); /* Shift left by 200px from its centered position */
+}
+
+/* 프로필 이미지 호버 효과 */
+.profile-image {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+}
+
+/* 연락처 항목 호버 효과 */
+.contact-item {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+}
+
+.contact-item::after {
+    content: '클릭하여 복사';
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #374151;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    z-index: 20;
+}
+
+.contact-item:hover::after {
+    opacity: 1;
+    visibility: visible;
+    right: -90px;
+}
+
+/* 연락처 버튼 툴팁 */
+.contact-btn {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.contact-btn::before {
+    content: attr(title);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #374151;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 20;
+}
+
+.contact-btn:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* 네비게이션 버튼 스타일 */
+.nav-buttons {
+    z-index: 15;
+}
+
+.nav-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    min-width: 120px;
+}
+
+.nav-btn:hover {
+    transform: translateX(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-btn:hover {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+}
+
+.skills-btn:hover {
+    background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.blog-btn:hover {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+}
+
+/* 콘텐츠 패널 스타일 */
+.content-panel {
+    max-width: 500px;
+    z-index: 20;
+    /* Enable scrolling and define max height */
+    max-height: calc(100vh - 100px); /* Adjust height to allow scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    
+    /* Initial hidden state for desktop */
+    width: 0;
+    transform: translateX(100%) translateY(-50%);
+    top: 50%;
+    right: 0;
+    position: fixed;
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 콘텐츠 패널 활성 상태 */
+.content-panel.active {
+    width: 500px; /* Full width when active */
+    transform: translateX(0) translateY(-50%); /* Move to visible position */
+}
+
+.content-inner {
+    width: 100%;
+    height: 100%;
+}
+
+/* 스킬 아이템 호버 효과 */
+.skill-item {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.skill-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 스터디 아이템 호버 효과 */
+.study-item {
+    transition: all 0.3s ease;
+}
+
+.study-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 페이지 로드 애니메이션 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.profile-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+    .profile-card {
+        width: 350px;
+        min-height: 550px;
+        padding: 1.5rem;
+    }
+    
+    .content-panel {
+        max-width: 400px; /* Adjusted max-width for tablets */
+    }
+    
+    .nav-btn {
+        min-width: 100px;
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+    
+    .container {
+        height: auto;
+        min-height: 100vh;
+        padding: 1rem;
+    }
+    
+    .profile-card {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 2rem;
+        min-height: auto;
+    }
+    /* Reset shifted state for mobile */
+    .profile-card.shifted {
+        transform: none;
+    }
+    
+    .nav-buttons {
+        position: static;
+        opacity: 1 !important;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .nav-btn {
+        width: 100%;
+        justify-content: center;
+        border-radius: 0.75rem;
+        padding: 1rem;
+    }
+    
+    .content-panel {
+        position: static;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 400px;
+        margin: 1rem auto;
+        height: auto !important; /* Allow content to expand on mobile */
+        border-radius: 1rem;
+        overflow: visible; /* Content will expand on mobile */
+        max-height: none; /* Remove max-height constraint on mobile */
+    }
+    /* Reset active state for mobile */
+    .content-panel.active {
+        width: 100%;
+        transform: none;
+    }
+
+    .content-inner {
+        opacity: 1 !important;
+    }
+}
+
+/* 스크롤바 숨기기 */
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

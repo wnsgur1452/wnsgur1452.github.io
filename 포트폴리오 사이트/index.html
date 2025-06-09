@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>디지털 명함</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="bg-gray-50">
+  <div class="h-screen w-screen flex items-center justify-center relative">
+    <div id="profileCard" class="profile-card">
+      <div class="profile-header">
+        <div class="icon">
+          <i class="fas fa-user"></i>
+        </div>
+        <h1 class="name">김개발</h1>
+        <p class="title">개발 공부중</p>
+        <p class="subtitle">다양한 개발 분야를 탐색하며 성장하는 예비 개발자입니다</p>
+      </div>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>example@email.com</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span>010-1234-5678</span>
+        </div>
+        <div class="contact-buttons">
+          <a href="#" class="contact-btn" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="contact-btn" title="Blog"><i class="fas fa-blog"></i></a>
+          <a href="#" class="contact-btn" title="SNS"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="highlights">
+        <h3>핵심 역량</h3>
+        <div class="highlight-item"><i class="fas fa-graduation-cap"></i><span>빠른 학습 능력</span></div>
+        <div class="highlight-item"><i class="fas fa-users"></i><span>협업 능력</span></div>
+        <div class="highlight-item"><i class="fas fa-lightbulb"></i><span>창의성</span></div>
+      </div>
+    </div>
+
+    <div class="tab-buttons">
+      <button class="tab-btn about" data-target="about">About Me</button>
+      <button class="tab-btn skills" data-target="skills">Skills</button>
+      <button class="tab-btn blog" data-target="blog">Blog</button>
+    </div>
+
+    <div id="about" class="tab-content">
+      <h2><i class="fas fa-user-circle"></i> About Me</h2>
+      <p>새로운 기술로 문제를 해결하는 것에 매력을 느껴 개발 공부를 시작하게 되었습니다.</p>
+      <p>현재 Python을 중심으로 프로그래밍 기초를 다지고 있으며, 웹 개발에도 관심을 가져 HTML, CSS, React를 학습하고 있습니다. 또한 데이터를 다루는 SQL 공부도 병행하고 있어 다양한 개발 분야에 대한 이해를 넓혀가고 있습니다.</p>
+      <p>앞으로는 사용자 중심의 서비스를 개발할 수 있는 개발자가 되는 것이 목표입니다. 지속적인 학습과 실무 경험을 통해 성장하며, 팀과 함께 협력하여 의미 있는 프로젝트를 만들어가고 싶습니다.</p>
+    </div>
+
+    <div id="skills" class="tab-content">
+      <h2><i class="fas fa-code"></i> Skills</h2>
+      <ul>
+        <li>Python - 초급: 기본 문법, 조건문, 반복문 학습 완료</li>
+        <li>HTML - 초급: 시맨틱 태그, 폼 요소 활용 가능</li>
+        <li>CSS - 초급: 레이아웃, 반응형 디자인 기초 학습 중</li>
+        <li>React - 초급: 컴포넌트, JSX 문법 기초 학습 중</li>
+        <li>SQL - 초급: SELECT, INSERT, UPDATE 쿼리 작성 가능</li>
+      </ul>
+    </div>
+
+    <div id="blog" class="tab-content">
+      <h2><i class="fas fa-book-open"></i> Blog & Study</h2>
+      <div class="study-item">
+        <h3>개인 학습 블로그</h3>
+        <p>공부한 내용과 개발 과정을 기록하고 정리합니다</p>
+        <a href="#" class="study-link"><i class="fas fa-external-link-alt"></i> 방문하기</a>
+      </div>
+      <div class="study-item">
+        <h3>GitHub Repository</h3>
+        <p>학습 프로젝트와 코드를 관리하는 저장소입니다</p>
+        <a href="#" class="study-link"><i class="fab fa-github"></i> 확인하기</a>
+      </div>
+    </div>
+  </div>
+  <script src="portfolio.js"></script>
+</body>
+</html>
