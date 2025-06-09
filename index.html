@@ -3,172 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>김준혁 - 초보 개발자 포트폴리오</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>김개발 - 개발자 포트폴리오</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#1e3a8a',
-                        'primary-light': '#1e40af',
-                        'gray-custom': '#4b5563'
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans overflow-hidden">
-    <div class="container mx-auto px-4 py-3 h-screen flex gap-4 max-w-7xl">
+<body>
+    <div class="container">
         <!-- Left Profile Card -->
-        <div class="profile-card bg-white rounded-2xl p-6 shadow-lg w-80 flex-shrink-0">
-            <div class="text-center mb-6">
-                <div class="profile-image w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-3 text-white text-3xl">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-image">
                     <i class="fas fa-user"></i>
                 </div>
-                <h1 class="text-2xl font-bold text-primary mb-1">김준혁</h1>
-                <p class="text-gray-600 font-medium mb-2">개발 공부중</p>
-                <p class="text-sm text-gray-custom leading-relaxed">다양한 개발 분야를 탐색하며 성장하는 예비 개발자입니다</p>
+                <h1 class="name">김개발</h1>
+                <p class="title">개발 공부중</p>
+                <p class="subtitle">다양한 개발 분야를 탐색하며 성장하는 예비 개발자입니다</p>
             </div>
             
-            <div class="contact-info mb-6">
-                <div class="space-y-2 mb-4">
-                    <div class="contact-item flex items-center text-sm px-2 py-1 rounded cursor-pointer hover:bg-blue-50 transition-colors">
-                        <i class="fas fa-envelope text-primary w-4 mr-3"></i>
+            <div class="contact-info">
+                <div class="contact-main">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
                         <span>example@email.com</span>
                     </div>
-                    <div class="contact-item flex items-center text-sm px-2 py-1 rounded cursor-pointer hover:bg-blue-50 transition-colors">
-                        <i class="fas fa-phone text-primary w-4 mr-3"></i>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
                         <span>010-1234-5678</span>
                     </div>
                 </div>
                 
-                <div class="flex justify-center gap-2">
-                    <a href="https://github.com/wnsgur1452/wnsgur1452.github.io" class="contact-btn w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary-light transition-all hover:-translate-y-0.5">
+                <div class="contact-buttons">
+                    <a href="#" class="contact-btn" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="#" class="contact-btn w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary-light transition-all hover:-translate-y-0.5">
+                    <a href="#" class="contact-btn" title="Blog">
                         <i class="fas fa-blog"></i>
                     </a>
-                    <a href="#" class="contact-btn w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary-light transition-all hover:-translate-y-0.5">
+                    <a href="#" class="contact-btn" title="SNS">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
             </div>
             
             <div class="highlights">
-                <h3 class="text-lg font-semibold text-primary mb-3">핵심 역량</h3>
-                <div class="space-y-2">
-                    <div class="highlight-item flex items-center text-sm text-gray-custom">
-                        <i class="fas fa-graduation-cap text-primary w-4 mr-3"></i>
-                        <span>빠른 학습 능력</span>
-                    </div>
-                    <div class="highlight-item flex items-center text-sm text-gray-custom">
-                        <i class="fas fa-users text-primary w-4 mr-3"></i>
-                        <span>협업 능력</span>
-                    </div>
-                    <div class="highlight-item flex items-center text-sm text-gray-custom">
-                        <i class="fas fa-lightbulb text-primary w-4 mr-3"></i>
-                        <span>창의성</span>
-                    </div>
+                <h3>핵심 역량</h3>
+                <div class="highlight-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>빠른 학습 능력</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-users"></i>
+                    <span>협업 능력</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>창의성</span>
                 </div>
             </div>
         </div>
 
-        <!-- Right Content Area -->
-        <div class="content-area flex-1 flex flex-col gap-4 h-full">
+        <!-- Right Content Cards -->
+        <div class="content-area">
             <!-- About Me Section -->
-            <div class="content-card bg-white rounded-2xl p-5 shadow-lg flex-1">
-                <h2 class="text-xl font-semibold text-primary mb-4 flex items-center gap-2">
-                    <i class="fas fa-user-circle text-lg"></i>
-                    About Me
-                </h2>
-                <div class="space-y-3 text-sm text-gray-custom leading-relaxed">
+            <div class="content-card">
+                <h2><i class="fas fa-user-circle"></i> About Me</h2>
+                <div class="card-content">
                     <p>새로운 기술로 문제를 해결하는 것에 매력을 느껴 개발 공부를 시작하게 되었습니다.</p>
+                    
                     <p>현재 Python을 중심으로 프로그래밍 기초를 다지고 있으며, 웹 개발에도 관심을 가져 HTML, CSS, React를 학습하고 있습니다. 또한 데이터를 다루는 SQL 공부도 병행하고 있어 다양한 개발 분야에 대한 이해를 넓혀가고 있습니다.</p>
+                    
                     <p>앞으로는 사용자 중심의 서비스를 개발할 수 있는 개발자가 되는 것이 목표입니다. 지속적인 학습과 실무 경험을 통해 성장하며, 팀과 함께 협력하여 의미 있는 프로젝트를 만들어가고 싶습니다.</p>
                 </div>
             </div>
 
-            <!-- Bottom Row -->
-            <div class="flex gap-4 flex-1">
-                <!-- Skills Section -->
-                <div class="content-card bg-white rounded-2xl p-5 shadow-lg flex-1">
-                    <h2 class="text-xl font-semibold text-primary mb-4 flex items-center gap-2">
-                        <i class="fas fa-code text-lg"></i>
-                        Skills
-                    </h2>
-                    <div class="space-y-4">
-                        <div class="skill-category">
-                            <h3 class="text-sm font-semibold text-primary mb-2">Programming Languages</h3>
-                            <div class="skill-item flex justify-between items-center px-3 py-2 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
-                                <span class="text-sm font-medium text-gray-700">Python</span>
-                                <span class="skill-level bg-primary text-white px-2 py-1 rounded-full text-xs font-medium">초급</span>
-                            </div>
+            <!-- Skills Section -->
+            <div class="content-card">
+                <h2><i class="fas fa-code"></i> Skills</h2>
+                <div class="card-content">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-level">초급</span>
+                            <div class="skill-tooltip">기본 문법, 조건문, 반복문 학습 완료</div>
                         </div>
-                        
-                        <div class="skill-category">
-                            <h3 class="text-sm font-semibold text-primary mb-2">Web Technologies</h3>
-                            <div class="space-y-1">
-                                <div class="skill-item flex justify-between items-center px-3 py-2 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
-                                    <span class="text-sm font-medium text-gray-700">HTML</span>
-                                    <span class="skill-level bg-primary text-white px-2 py-1 rounded-full text-xs font-medium">초급</span>
-                                </div>
-                                <div class="skill-item flex justify-between items-center px-3 py-2 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
-                                    <span class="text-sm font-medium text-gray-700">CSS</span>
-                                    <span class="skill-level bg-primary text-white px-2 py-1 rounded-full text-xs font-medium">초급</span>
-                                </div>
-                                <div class="skill-item flex justify-between items-center px-3 py-2 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
-                                    <span class="text-sm font-medium text-gray-700">React</span>
-                                    <span class="skill-level bg-primary text-white px-2 py-1 rounded-full text-xs font-medium">초급</span>
-                                </div>
-                            </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Web Technologies</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-level">초급</span>
+                            <div class="skill-tooltip">시맨틱 태그, 폼 요소 활용 가능</div>
                         </div>
-                        
-                        <div class="skill-category">
-                            <h3 class="text-sm font-semibold text-primary mb-2">Database</h3>
-                            <div class="skill-item flex justify-between items-center px-3 py-2 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
-                                <span class="text-sm font-medium text-gray-700">SQL</span>
-                                <span class="skill-level bg-primary text-white px-2 py-1 rounded-full text-xs font-medium">초급</span>
-                            </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-level">초급</span>
+                            <div class="skill-tooltip">레이아웃, 반응형 디자인 기초 학습 중</div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                            <span class="skill-level">초급</span>
+                            <div class="skill-tooltip">컴포넌트, JSX 문법 기초 학습 중</div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Database</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <span class="skill-level">초급</span>
+                            <div class="skill-tooltip">SELECT, INSERT, UPDATE 쿼리 작성 가능</div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Blog & Study Section -->
-                <div class="content-card bg-white rounded-2xl p-5 shadow-lg flex-1">
-                    <h2 class="text-xl font-semibold text-primary mb-4 flex items-center gap-2">
-                        <i class="fas fa-book-open text-lg"></i>
-                        Blog & Study
-                    </h2>
-                    <div class="space-y-4">
-                        <div class="study-item bg-gray-50 p-4 rounded-xl border-l-4 border-primary">
-                            <div class="flex justify-between items-start">
-                                <div class="study-info flex-1">
-                                    <h3 class="text-sm font-semibold text-primary mb-1">개인 학습 블로그</h3>
-                                    <p class="text-xs text-gray-600">공부한 내용과 개발 과정을 기록하고 정리합니다</p>
-                                </div>
-                                <a href="#" class="study-link bg-primary text-white px-3 py-2 rounded-lg text-xs font-medium hover:bg-primary-light transition-colors flex items-center gap-1 ml-3 whitespace-nowrap">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    방문하기
-                                </a>
+            <!-- Blog/Study Section -->
+            <div class="content-card">
+                <h2><i class="fas fa-book-open"></i> Blog & Study</h2>
+                <div class="card-content">
+                    <div class="study-links">
+                        <div class="study-item">
+                            <div class="study-info">
+                                <h3>개인 학습 블로그</h3>
+                                <p>공부한 내용과 개발 과정을 기록하고 정리합니다</p>
                             </div>
+                            <a href="#" class="study-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                방문하기
+                            </a>
                         </div>
                         
-                        <div class="study-item bg-gray-50 p-4 rounded-xl border-l-4 border-primary">
-                            <div class="flex justify-between items-start">
-                                <div class="study-info flex-1">
-                                    <h3 class="text-sm font-semibold text-primary mb-1">GitHub Repository</h3>
-                                    <p class="text-xs text-gray-600">학습 프로젝트와 코드를 관리하는 저장소입니다</p>
-                                </div>
-                                <a href="#" class="study-link bg-primary text-white px-3 py-2 rounded-lg text-xs font-medium hover:bg-primary-light transition-colors flex items-center gap-1 ml-3 whitespace-nowrap">
-                                    <i class="fab fa-github"></i>
-                                    확인하기
-                                </a>
+                        <div class="study-item">
+                            <div class="study-info">
+                                <h3>GitHub Repository</h3>
+                                <p>학습 프로젝트와 코드를 관리하는 저장소입니다</p>
                             </div>
+                            <a href="#" class="study-link">
+                                <i class="fab fa-github"></i>
+                                확인하기
+                            </a>
                         </div>
                     </div>
                 </div>
